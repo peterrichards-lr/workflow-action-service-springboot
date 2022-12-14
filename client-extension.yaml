@@ -1,0 +1,14 @@
+runtime:
+  type: service
+  template: service-springboot
+  cpu: 500m
+  memory: 256Mi
+
+my-workflow-action-2-user-agent:
+  type: oauthApplicationUserAgent
+  scopes:
+    - Liferay.Headless.Admin.Workflow.everything
+
+assemble:
+  - include:
+    - "*.client-extension-config.json"
